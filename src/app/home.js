@@ -3,21 +3,6 @@ import React, { forwardRef } from 'react';
 
 const Home = forwardRef((props, ref) => {
 
-  const { AboutRef, ProjectsRef } = props;
-
-  const scrollToSection = (elementRef) => {
-
-    console.log("calledd");
-    console.log(elementRef.current)
-
-    const sectionTop = elementRef.current.getBoundingClientRect().top;
-    let scrollPosition = window.scrollY + sectionTop;
-
-    window.scrollTo({
-      top: scrollPosition,
-      behavior: 'smooth'
-    });
-  }
 
   return (
     <div ref = {ref} className="text-white flex justify-center items-center overflow-hidden relative w-full min-h-screen" 
@@ -51,7 +36,6 @@ const Home = forwardRef((props, ref) => {
           <div className='w-1/4 space-y-2 sm:w-1/3 md:w-1/2'>
             <h1 className="font-bold">ABOUT ME</h1>
             <p className="text-gray-300 max-w-full"> I'm a student at <span className="text-white">Emory University</span> studying <span className="text-white">CS, Data Science,</span> and <span className='text-white'>Pre-Law.</span></p>
-            <button onClick = {() => scrollToSection(AboutRef)} className="text-white font-bold underline hover:text-sky-500 transition ease-in-out duration-300"> Learn More </button>
           </div>
 
           <hr className="h-0.5 bg-gray-200 border-0 w-1/4 sm:w-1/3 md:w-1/2" />
@@ -59,7 +43,6 @@ const Home = forwardRef((props, ref) => {
           <div className='w-1/4 space-y-2 sm:w-1/3 md:w-1/2'>
             <h1 className="font-bold">PROJECTS</h1>
             <p className="text-gray-300"> Check out my recent projects directly through a macbook mockup I made! </p>
-            <button onClick = {() => scrollToSection(ProjectsRef)} className="text-white font-bold underline hover:text-sky-500 transition ease-in-out duration-300"> See Portfolio </button>
           </div>
         </div>
         
