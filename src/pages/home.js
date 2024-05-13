@@ -1,11 +1,10 @@
-'use client';
 import React, { forwardRef } from 'react';
 
-const Home = forwardRef((props, ref) => {
+export default function Home() {
 
 
   return (
-    <div ref = {ref} className="text-white flex justify-center items-center overflow-hidden relative w-full min-h-screen" 
+    <div className="text-white flex justify-center items-center overflow-hidden relative w-full min-h-screen" 
       style={{ 
       // backgroundImage: `url(${background})`,
       // backgroundSize: 'cover', 
@@ -51,6 +50,6 @@ const Home = forwardRef((props, ref) => {
       {/* <img src={me} alt="Profile" className="w-3/5 h-full z-0 pt-12" /> */}
     </div>
   );
-});
+}
 
-export default Home;
+
