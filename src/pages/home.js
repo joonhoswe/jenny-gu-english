@@ -1,10 +1,14 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
+import Image from 'next/image';
+import jenny from '../assets/home.png';
+import jennyMobile from '../assets/jenny-mobile.png';
+import img from '../assets/00.jpg';
 
 export default function Home() {
 
 
   return (
-    <div className="text-white flex justify-center items-center overflow-hidden relative w-full min-h-screen" 
+    <div className="text-white flex flex-col justify-center items-center overflow-hidden relative w-full min-h-screen" 
       style={{ 
       // backgroundImage: `url(${background})`,
       // backgroundSize: 'cover', 
@@ -12,23 +16,6 @@ export default function Home() {
       // backgroundPosition: 'center',
     }}>
       <div className="absolute inset-0 flex justify-between items-center">
-
-        {/* typewriter effect text */}
-        <div className="z-5 ml-12 md:ml-16 lg:ml-24 space-y-4">
-            <h2 className="md:text-3xl lg:text-5xl font-bold">Hi, I'm Jenny,</h2>
-            <h2 className="md:text-3xl lg:text-5xl font-bold">
-            {/* <ReactTyped
-                strings = {[
-                    "A Student",
-                    "A Developer",
-                    "An Avid Chef",
-                ]}
-                typeSpeed = {50}
-                backSpeed = {50}
-                loop
-            /> */}
-            </h2>
-        </div>
         
         {/* right side of me image */}
         {/* <div className="z-50 pt-12 flex flex-col space-y-2 text-xs -mr-72 sm:-mr-60 md:-mr-52 lg:-mr-40 sm:text-xs md:text-sm lg:text-base md:space-y-3 lg:space-y-5 md:pb-48">
@@ -47,7 +34,8 @@ export default function Home() {
         
       </div>
 
-      {/* <img src={me} alt="Profile" className="w-3/5 h-full z-0 pt-12" /> */}
+      <Image src={jenny} alt="Profile" className="w-3/5 h-3/5 z-0 pt-12" />
+      <Image src={img} alt="img" className="w-full h-full z-0 pt-12" />
     </div>
   );
 }
