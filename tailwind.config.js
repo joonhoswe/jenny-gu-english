@@ -14,6 +14,7 @@ module.exports = {
       },
       colors: {
         'green-150': '#1E5F41',
+        'gray-150': '#F1F1F1',
       }
     },
   },

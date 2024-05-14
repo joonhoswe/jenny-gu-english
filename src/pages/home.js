@@ -35,7 +35,10 @@ export default function Home() {
       </div>
 
       <Image src={jenny} alt="Profile" className="w-3/5 h-3/5 z-0 pt-12" />
-      <Image src={img} alt="img" className="w-full h-full z-0 pt-12" />
+      <div className='h-full w-full bg-gray-150 flex justify-center'>
+          <Image src={img} alt="img" className="w-3/5 h-full z-0 pt-12" />
+      </div>
+      
     </div>
   );
 }
