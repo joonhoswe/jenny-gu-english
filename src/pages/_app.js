@@ -14,7 +14,6 @@ export default function MyApp({ Component, pageProps }) {
   }, []);
 
   if (!redirectUri) {
-    // Optionally, you could return a loading spinner or something until the redirectUri is set
     return <div>Loading...</div>;
   }
 

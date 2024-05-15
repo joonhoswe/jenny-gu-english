@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Fade as Hamburger } from 'hamburger-react';
 import Login from '@components/login';
+import Logout from '@components/logout';
 
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
@@ -37,42 +38,43 @@ export default function Navbar() {
         </div>
         <div className='mr-4 flex items-center justify-center space-x-6'>
             <button className='hover:text-green-150'> 장바구니 </button>
-            {/* <button> 로그인 / 회원가입 </button> */}
             <Login />
+            <Logout />
         </div>
       </div>
 
       <div className='flex items-center justify-between w-full h-14 md:hidden'>
 
         <p className='ml-4'> Logo </p>
-        {/* Mobile NavBar Icon */}
-        <Hamburger rounded size={24} duration={0.4} distance='lg' hideOutline={false} onToggle={toggleMenu} />
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial="closed"
-              animate="open"
-              exit="closed"
-              variants={sidebarVariants}
-              transition={{ duration: 0.4 }}
-              className="z-20 pt-12 pb-28 absolute top-full right-0 h-screen w-1/3 bg-gray-300 flex flex-col justify-between"
-            >
-              {/* Website Section Links */}
-              <div className='flex flex-col space-y-6'>
-                {navLinks.map((link) => (
-                  <button key={link.title} className="">
-                    {link.title}
-                  </button>
-                ))}
-              </div>
+        <div className='flex items-center flex-row space-x-4'>
 
-              <div className='flex flex-col space-y-6'>
-                  <button> 장바구니 </button>
-                  <button> 로그인/회원가입 </button>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence> 
+          <button className='hover:text-green-150'> 장바구니 </button>
+          <Login />
+          {/* Mobile NavBar Icon */}
+          <Hamburger rounded size={24} duration={0.4} distance='lg' hideOutline={false} onToggle={toggleMenu} />
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                initial="closed"
+                animate="open"
+                exit="closed"
+                variants={sidebarVariants}
+                transition={{ duration: 0.4 }}
+                className="z-20 pt-12 pb-28 absolute top-full right-0 h-screen w-1/3 bg-gray-300 flex flex-col justify-between"
+              >
+                {/* Website Section Links */}
+                <div className='flex flex-col space-y-6'>
+                  {navLinks.map((link) => (
+                    <button key={link.title} className="">
+                      {link.title}
+                    </button>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence> 
+        </div>
+        
       </div>
     </div>
   );
