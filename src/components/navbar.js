@@ -30,13 +30,13 @@ export default function Navbar() {
         <div className="flex items-center justify-center space-x-6 ml-4">
         <p> Logo </p>
           {navLinks.map((link) => (
-            <button key={link.title} className="">
+            <button key={link.title} className="hover:text-green-150">
               {link.title}
             </button>
           ))}
         </div>
         <div className='mr-4 flex items-center justify-center space-x-6'>
-            <button> 장바구니 </button>
+            <button className='hover:text-green-150'> 장바구니 </button>
             {/* <button> 로그인 / 회원가입 </button> */}
             <Login />
         </div>
