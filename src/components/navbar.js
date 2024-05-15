@@ -55,7 +55,7 @@ export default function Navbar() {
                 isAuthenticated ? (
                   <></>
                 ) : (
-                  <Image src={notLoggedIn} alt='Not Logged In' className='w-8 h-8' />
+                  <Image src={notLoggedIn} alt='Not Logged In' className='w-6 h-86' />
                 )
               }
               
