@@ -27,8 +27,13 @@ yarn-error.log*
 
 # local env files
 .env*.local
-.json
-.mjs
+
+# config filesdw
+eslintrc.json
+jsconfig.json
+next.config.mjs
+postcss.config.mjs
+tailwind.config.js
 
 # vercel
 .vercel
