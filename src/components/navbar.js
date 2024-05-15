@@ -10,11 +10,7 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { title: "제니쌤 소개" },
-    { title: "프로그램 설명" },
-    { title: "수강후기" },
-    { title: "수강신청" },
-    { title: "FAQ" }
+    { title: "" },
   ];
 
   const sidebarVariants = {
@@ -35,8 +31,7 @@ export default function Navbar() {
           ))}
         </div>
         <div className='mr-4 flex items-center justify-center space-x-3'>
-            <button> 장바구니 </button>
-            <button> 로그인 / 회원가입 </button>
+            <button>  </button>
         </div>
       </div>
 
@@ -65,8 +60,7 @@ export default function Navbar() {
               </div>
 
               <div className='flex flex-col space-y-6'>
-                  <button> 장바구니 </button>
-                  <button> 로그인/회원가입 </button>
+                  <button>  </button>
               </div>
             </motion.div>
           )}
