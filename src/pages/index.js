@@ -1,13 +1,8 @@
 import React from 'react';
-import Home from './home';
+import Home from '@pages/home';
 
-const page = () => {
-
-  return (
-   <div className='bg-green-150'>
-    <Home />
-  </div>
-  );
+const IndexPage = () => {
+  return <Home />;
 };
 
-export default page;
+export default IndexPage;

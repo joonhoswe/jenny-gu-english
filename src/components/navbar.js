@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Fade as Hamburger } from 'hamburger-react';
+import Login from '@components/login';
 
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
@@ -36,7 +37,8 @@ export default function Navbar() {
         </div>
         <div className='mr-4 flex items-center justify-center space-x-3'>
             <button> 장바구니 </button>
-            <button> 로그인 / 회원가입 </button>
+            {/* <button> 로그인 / 회원가입 </button> */}
+            <Login />
         </div>
       </div>
 
