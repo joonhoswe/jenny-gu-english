@@ -35,7 +35,7 @@ export default function Navbar() {
             </button>
           ))}
         </div>
-        <div className='mr-4 flex items-center justify-center space-x-3'>
+        <div className='mr-4 flex items-center justify-center space-x-6'>
             <button> 장바구니 </button>
             {/* <button> 로그인 / 회원가입 </button> */}
             <Login />
