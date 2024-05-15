@@ -1,7 +1,6 @@
 import React from 'react';
 import { useAuth0 } from "@auth0/auth0-react";
 import Logout from '@components/logout';
-import Image from 'next/image';
 
 export default function Profile() {
 
@@ -14,8 +13,8 @@ export default function Profile() {
   return isAuthenticated ? (
     <div className='h-screen w-screen bg-white flex-col space-y-4 text-black p-8'>
         <div className='flex flex-row space-x-3 w-full items-center'>
-            <Image src={user.picture} alt={user.name} className="w-16 h-16 rounded-full" />
-            <p> 환영합니다, {user.name} 님</p>
+          <img src={user.picture} alt={user.name} className="w-16 h-16 rounded-full" />
+          <p> 환영합니다, {user.name} 님 </p>
         </div>
         <Logout />
     </div>
