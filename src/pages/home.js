@@ -20,6 +20,7 @@ export default function Home() {
       <div className='h-full w-full bg-gray-150 flex justify-center'>
           <Image src={img} alt="img" className="w-3/5 h-full z-0 pt-12" />
       </div>
+      <div className='h-52 w-full bg-gray-150'/>
       
     </div>
   );
