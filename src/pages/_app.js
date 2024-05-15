@@ -24,6 +24,8 @@ export default function MyApp({ Component, pageProps }) {
       authorizationParams={{
         redirect_uri: redirectUri,
       }}
+      cacheLocation="localstorage"
+      useRefreshTokens={true}
     >
       <Layout>
         <Component {...pageProps} />

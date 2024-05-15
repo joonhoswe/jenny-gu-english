@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
+import { useAuth0 } from "@auth0/auth0-react"; 
 import { motion, AnimatePresence } from 'framer-motion';
 import { Fade as Hamburger } from 'hamburger-react';
+import Image from 'next/image';
 import Login from '@components/login';
-import Logout from '@components/logout';
+import Link from 'next/link';
+import cart from '../assets/shopping_cart.png';
+import notLoggedIn from '../assets/notLoggedIn.png';
+
 
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
+
+  const { isAuthenticated } = useAuth0();
 
   const toggleMenu = () => {
     setOpen(!isOpen);
@@ -29,26 +36,39 @@ export default function Navbar() {
       <div className='items-center justify-between w-full h-14 hidden md:flex'>
         
         <div className="flex items-center justify-center space-x-6 ml-4">
-        <p> Logo </p>
+        <Link href='/home' className='transition duration-300 ease-in-out hover:font-bold hover:text-green-150'> Logo / 홈 </Link>
           {navLinks.map((link) => (
-            <button key={link.title} className="hover:text-green-150">
+            <button key={link.title} className="transition duration-300 ease-in-out hover:font-bold hover:text-green-150">
               {link.title}
             </button>
           ))}
         </div>
         <div className='mr-4 flex items-center justify-center space-x-6'>
-            <button className='hover:text-green-150'> 장바구니 </button>
-            <Login />
-            <Logout />
+            <div className='flex flex-row space-x-1'>
+              <button className='transition duration-300 ease-in-out hover:font-bold hover:text-green-150'> 장바구니 </button>
+              <Image src={cart} alt='cart' className='w-6 h-6' />
+            </div>
+            
+            <div className='flex flex-row space-x-1'>
+              <Login />
+              {
+                isAuthenticated ? (
+                  <></>
+                ) : (
+                  <Image src={notLoggedIn} alt='Not Logged In' className='w-8 h-8' />
+                )
+              }
+              
+            </div>
         </div>
       </div>
 
       <div className='flex items-center justify-between w-full h-14 md:hidden'>
 
-        <p className='ml-4'> Logo </p>
+        <Link href='/home' className='ml-4 transition duration-300 ease-in-out hover:font-bold hover:text-green-150'> Logo / 홈 </Link>
         <div className='flex items-center flex-row space-x-4'>
 
-          <button className='hover:text-green-150'> 장바구니 </button>
+          <button className='transition duration-300 ease-in-out hover:font-bold hover:text-green-150'> 장바구니 </button>
           <Login />
           {/* Mobile NavBar Icon */}
           <Hamburger rounded size={24} duration={0.4} distance='lg' hideOutline={false} onToggle={toggleMenu} />
