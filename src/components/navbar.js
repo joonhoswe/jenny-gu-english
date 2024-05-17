@@ -19,11 +19,12 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { title: "제니쌤 소개" },
-    { title: "프로그램 설명" },
-    { title: "수강후기" },
-    { title: "수강신청" },
-    { title: "FAQ" }
+    { title: "Logo / 홈", path: "/home"},
+    { title: "제니쌤 소개", path: "/home" },
+    { title: "프로그램 설명", path: "/home" },
+    { title: "수강후기", path: "/home" },
+    { title: "수강신청", path: "/home" },
+    { title: "FAQ", path: "/faq"}
   ];
 
   const sidebarVariants = {
@@ -36,11 +37,10 @@ export default function Navbar() {
       <div className='items-center justify-between w-full h-14 hidden md:flex'>
         
         <div className="flex items-center justify-center space-x-6 ml-4">
-        <Link href='/home' className='transition duration-300 ease-in-out hover:font-bold hover:text-green-150'> Logo / 홈 </Link>
           {navLinks.map((link) => (
-            <button key={link.title} className="transition duration-300 ease-in-out hover:font-bold hover:text-green-150">
+            <Link key={link.title} href={link.path} className="transition duration-300 ease-in-out hover:font-bold hover:text-green-150">
               {link.title}
-            </button>
+            </Link>
           ))}
         </div>
         <div className='mr-4 flex items-center justify-center space-x-6'>
