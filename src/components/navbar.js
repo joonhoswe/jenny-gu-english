@@ -46,7 +46,7 @@ export default function Navbar() {
         <div className='mr-4 flex items-center justify-center space-x-6'>
             <div className='flex flex-row space-x-1'>
               <button className='transition duration-300 ease-in-out hover:font-bold hover:text-green-150'> 장바구니 </button>
-              <Image src={cart} alt='cart' className='w-6 h-6' />
+              <Image src={cart} alt='cart' className='w-6 h-6'/>
             </div>
             
             <div className='flex flex-row space-x-1'>
@@ -55,7 +55,7 @@ export default function Navbar() {
                 isAuthenticated ? (
                   <></>
                 ) : (
-                  <Image src={notLoggedIn} alt='Not Logged In' className='w-6 h-86' />
+                  <Image src={notLoggedIn} alt='Not Logged In' className='w-6 h-6' />
                 )
               }
               
@@ -68,8 +68,21 @@ export default function Navbar() {
         <Link href='/home' className='ml-4 transition duration-300 ease-in-out hover:font-bold hover:text-green-150'> Logo / 홈 </Link>
         <div className='flex items-center flex-row space-x-4'>
 
-          <button className='transition duration-300 ease-in-out hover:font-bold hover:text-green-150'> 장바구니 </button>
-          <Login />
+            <div className='flex flex-row space-x-1'>
+              <button className='transition duration-300 ease-in-out hover:font-bold hover:text-green-150'> 장바구니 </button>
+              <Image src={cart} alt='cart' className='w-6 h-6'/>
+            </div>
+            <div className='flex flex-row space-x-1'>
+              <Login />
+              {
+                isAuthenticated ? (
+                  <></>
+                ) : (
+                  <Image src={notLoggedIn} alt='Not Logged In' className='w-6 h-6' />
+                )
+              }
+              
+            </div>
           {/* Mobile NavBar Icon */}
           <Hamburger rounded size={24} duration={0.4} distance='lg' hideOutline={false} onToggle={toggleMenu} />
           <AnimatePresence>
