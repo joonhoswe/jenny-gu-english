@@ -16,7 +16,7 @@ export default function Home() {
 
       <div className="relative w-full h-full">
         <Image src={jenny} alt="home" />
-        <Link href='/programs' className='w-20 h-7 sm:w-32 sm:h-12 md:w-40 md:h-12 lg:w-52 lg:h-16 rounded-3xl bg-yellow-300 absolute bottom-2 right-10 sm:bottom-8 sm:right-32 md:bottom-10 md:right-40 lg:bottom-28 lg:right-1/4 font-bold text-lg md:text-2xl flex items-center justify-center'> 
+        <Link href='/programs' className='w-20 h-7 sm:w-32 sm:h-12 md:w-40 md:h-12 lg:w-52 lg:h-16 rounded-3xl bg-yellow-300 absolute bottom-2 right-10 sm:bottom-8 sm:right-32 md:bottom-10 md:right-40 lg:bottom-28 lg:right-1/4 font-bold text-lg md:text-2xl flex items-center justify-center hover:scale-105 transition duration-300 ease-in-out'> 
         시작하기! 
         </Link>
       </div>

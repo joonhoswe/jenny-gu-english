@@ -20,10 +20,11 @@ export default function Navbar() {
 
   const navLinks = [
     { title: "Logo / 홈", path: "/home"},
-    { title: "제니쌤 소개", path: "/home" },
-    { title: "프로그램 설명", path: "/home" },
-    { title: "수강후기", path: "/home" },
-    { title: "수강신청", path: "/home" },
+    { title: "제니쌤 소개", path: "/aboutJenny" },
+    { title: "프로그램 설명", path: "/programs" },
+    { title: "수강 후기", path: "/home" },
+    { title: "수강 신청", path: "/home" },
+    { title: "강의 보기", path: "/home" },
     { title: "FAQ", path: "/faq"}
   ];
 
@@ -33,7 +34,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="flex items-center justify-between w-full h-14 sticky top-0 z-50 text-black bg-white bg-opacity-60 backdrop-filter backdrop-blur-lg">
+    <div className="flex items-center justify-between w-full h-16 sticky top-0 z-50 text-black bg-white">
       <div className='items-center justify-between w-full h-14 hidden md:flex'>
         
         <div className="flex items-center justify-center space-x-6 ml-4">

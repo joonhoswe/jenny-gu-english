@@ -6,7 +6,7 @@ import NaverBlog from '../assets/naverBlog.png';
 
 export default function Footer() {
     return (
-        <div className="h-96 w-full bg-gray-600 text-white flex flex-row px-32 py-16 text-base">
+        <div className="h-72 w-full bg-gray-600 text-white flex flex-row px-32 py-16 text-base">
             {/* left side with name and short bio */}
             <div className="flex flex-col space-y-8 w-1/2 h-full">
                 <h1 className="text-3xl"> 제니구의 영어전담마크 </h1>
