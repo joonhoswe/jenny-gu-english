@@ -15,7 +15,7 @@ function LoginButton() {
       <img src={user.picture} alt={user.name} className="w-6 h-6 rounded-full" />
     </Link>
   ) : (
-    <button onClick={() => loginWithRedirect()} className="transition duration-300 ease-in-out hover:font-bold hover:text-green-150">
+    <button onClick={() => loginWithRedirect()} className="transition duration-300 ease-in-out hover:font-bold hover:text-green-150 text-sm md:text-base">
       로그인 / 회원가입
     </button>
   );

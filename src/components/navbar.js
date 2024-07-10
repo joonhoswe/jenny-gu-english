@@ -44,10 +44,10 @@ export default function Navbar() {
           ))}
         </div>
         <div className='mr-4 flex items-center justify-center space-x-6'>
-            <div className='flex flex-row space-x-1'>
+            {/* <div className='flex flex-row space-x-1'>
               <button className='transition duration-300 ease-in-out hover:font-bold hover:text-green-150'> 장바구니 </button>
               <Image src={cart} alt='cart' className='w-6 h-6'/>
-            </div>
+            </div> */}
             
             <div className='flex flex-row space-x-1'>
               <Login />
@@ -65,13 +65,13 @@ export default function Navbar() {
 
       <div className='flex items-center justify-between w-full h-14 md:hidden'>
 
-        <Link href='/home' className='ml-4 transition duration-300 ease-in-out hover:font-bold hover:text-green-150'> Logo / 홈 </Link>
-        <div className='flex items-center flex-row space-x-4'>
+        <Link href='/home' className='ml-4 text-sm transition duration-300 ease-in-out hover:font-bold hover:text-green-150'> Logo / 홈 </Link>
+        <div className='flex items-center flex-row'>
 
-            <div className='flex flex-row space-x-1'>
+            {/* <div className='flex flex-row space-x-1'>
               <button className='transition duration-300 ease-in-out hover:font-bold hover:text-green-150'> 장바구니 </button>
               <Image src={cart} alt='cart' className='w-6 h-6'/>
-            </div>
+            </div> */}
             <div className='flex flex-row space-x-1'>
               <Login />
               {
@@ -93,7 +93,7 @@ export default function Navbar() {
                 exit="closed"
                 variants={sidebarVariants}
                 transition={{ duration: 0.4 }}
-                className="z-20 pt-12 pb-28 absolute top-full right-0 h-screen w-1/3 bg-gray-300 flex flex-col justify-between"
+                className="z-20 pt-12 pb-28 absolute top-full right-0 h-screen w-full bg-gray-300 flex flex-col justify-between"
               >
                 {/* Website Section Links */}
                 <div className='flex flex-col space-y-6'>
