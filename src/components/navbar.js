@@ -19,7 +19,7 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { title: "Logo / 홈", path: "/home"},
+    { title: "홈", path: "/home"},
     { title: "제니쌤 소개", path: "/aboutJenny" },
     { title: "프로그램 설명", path: "/programs" },
     { title: "수강 후기", path: "/home" },
