@@ -22,9 +22,9 @@ export default function Navbar() {
     { title: "홈", path: "/home"},
     { title: "제니쌤 소개", path: "/aboutJenny" },
     { title: "프로그램 설명", path: "/programs" },
-    { title: "수강 후기", path: "/home" },
-    { title: "수강 신청", path: "/home" },
-    { title: "강의 보기", path: "/home" },
+    { title: "후기", path: "/home" },
+    { title: "수강신청", path: "/home" },
+    { title: "강의보기", path: "/home" },
     { title: "FAQ", path: "/faq"}
   ];
 
