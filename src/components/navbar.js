@@ -24,7 +24,7 @@ export default function Navbar() {
     { title: "프로그램 설명", path: "/programs" },
     { title: "후기", path: "/home" },
     { title: "수강신청", path: "/home" },
-    { title: "강의보기", path: "/home" },
+    { title: "강의보기", path: "/videos" },
     { title: "FAQ", path: "/faq"}
   ];
 
